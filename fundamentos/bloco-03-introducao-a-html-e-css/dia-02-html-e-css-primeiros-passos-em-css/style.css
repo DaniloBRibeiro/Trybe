@@ -1,0 +1,40 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 65px;
+    color: orange;
+    text-decoration: underline;
+    
+  }
+
+  p {
+    font-weight: 600;
+    font-size: 3em;
+  }
+
+  body {
+    font-size: 16px;
+  } 
+
+  ul {
+    background-color: green;
+    font-style: italic; 
+    line-height: 3;
+    text-align: center;
+
+  }
+
+  .cordefundo {
+    background-color: blue;
+  }
+
+  #amarelo {
+    background-color: yellow;
+  }
+
+  #vermelho {
+    background-color: red;
+  }
+
+  #marrom {
+    background-color: brown;
+  }
