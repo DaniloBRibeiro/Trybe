@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <header>
+      <h2 id="page-title">Título</h2>
+      <p id="paragraph" class="paragrafo">Dê uma cor para este parágrafo!</p>
+      <h4 id="subtitle">Subtítulo</h4>
+      <p id="second-paragraph" class="paragrafo">Segundo parágrafo!</p>
+    </header>
+    <script>
+      // document.getElementById("paragraph").style.color = 'red';
+      // document.getElementById('page-title').innerText = 'Matrix';
+      // document.getElementById('second-paragraph').innerText = 'É um filme muito daorinha';
+      // document.getElementById('subtitle').innerText = 'O novo cult';
+      // document.getElementsByClassName('paragrafo')[0].style.color = 'blue';
+      // document.getElementsByTagName('h4')[0].style.color = 'red';
+
+      document.querySelector("#paragraph").style.color = 'red';
+      document.querySelector('#page-title').innerText = 'Matrix';
+      document.querySelector('#second-paragraph').innerText = 'É um filme muito daorinha';
+      document.querySelector('#subtitle').innerText = 'O novo cult';
+      document.querySelectorAll('.paragrafo')[0].style.color = 'blue';
+      document.querySelectorAll('h4')[0].style.color = 'red';
+    </script>
+  </body>
+</html>
