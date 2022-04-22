@@ -58,12 +58,62 @@
   <body>
     <script>
       //1
-      let hUm = document.createElement('h1');
-      hUm.innerHTML = 'Exercício 5.2 - JavaScript DOM';
-      document.querySelector('body').appendChild(hUm);
+      let tagHUm = document.createElement('h1');
+      tagHUm.innerHTML = 'Exercício 5.2 - JavaScript DOM';
+      document.querySelector('body').appendChild(tagHUm);
       //2
+      let tagMain = document.createElement('main');
+      tagMain.className = 'main-content';
+      document.querySelector('body').appendChild(tagMain);
+      //3
+      let tagSection = document.createElement('section');
+      tagSection.className = 'center-content';
+      tagMain.appendChild(tagSection);
+      //4
+      let tagP = document.createElement('p');
+      tagP.innerHTML = 'Nilo';
+      document.querySelector('section').appendChild(tagP);
+      //5
+      let tagSection2 = document.createElement('section');
+      tagSection2.className = 'left-content';
+      tagMain.appendChild(tagSection2);
+      //6
+      let tagSection3 = document.createElement('section');
+      tagSection3.className = 'right-content';
+      tagMain.appendChild(tagSection3);
+      //7
+      let imagem = document.createElement('img');
+      imagem.className = 'small-image';
+      imagem.src = 'https://picsum.photos/200';
+      tagSection2.appendChild(imagem);
+      //8
+      let lista = document.createElement('ul');
+      tagSection3.appendChild(lista);
+      let valoresLista = ['um', 'dois', 'três', 'quatro', 'cinco', 'seis', 'sete', 'oito', 'nove', 'dez'];
+      for (let i in valoresLista) {
+        let itensLista = document.createElement('li');
+        itensLista.innerHTML = valoresLista[i];
+        lista.appendChild(itensLista);
+      }
+      //9
+      for (let l = 1; l <= 3; l += 1) {
+        let tagH3 = document.createElement('h3');
+        tagH3.innerHTML = 'Titulo' + l;
+        tagMain.appendChild(tagH3);
+      }
+      //
+      //1
       
+      //2
 
+      //3
+
+      //4
+
+      //5
+
+      //6
+      
     </script>
   </body>
 </html>
