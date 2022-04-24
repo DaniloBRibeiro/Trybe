@@ -101,19 +101,26 @@
         tagH3.innerHTML = 'Titulo' + l;
         tagMain.appendChild(tagH3);
       }
-      //
+
       //1
-      
+      tagHUm.className = 'title';
       //2
-
+      const desc = document.getElementsByTagName('h3');
+      for (let k = 0; k < 3; k += 1) {
+        desc[k].className = 'description';
+      }
       //3
-
+      const removeLeft = document.getElementsByClassName('left-content')[0]; 
+      tagMain.removeChild(removeLeft);
       //4
-
+      document.getElementsByClassName('right-content')[0].style.marginRight = 'auto';
       //5
-
+      let corMain = document.getElementsByClassName('center-content')[0];
+      corMain.parentNode.style.backgroundColor = 'green';
       //6
-      
+
+      lista.lastChild.remove();
+      lista.lastChild.remove();
     </script>
   </body>
 </html>
