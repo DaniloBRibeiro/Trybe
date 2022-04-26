@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>TrybeTrip</title>
+</head>
+<body>
+  <header>TrybeTrip</header>  
+  <form>
+    <fieldset>
+      <label for="fullname">Nome: </label>
+        <input type="text" name="nome" required autocomplete="off" autofocus minlength="10" maxlength="40" id="fullname" placeholder="Digite seu nome completo">      
+      <br>
+      <label for="email">Email: </label>
+        <input type="email" name="email" required minlength="10" maxlength="50" id="email" placeholder="Digite seu email">      
+      <br>
+      <label for="opt1">Cidade</label>
+        <input type="radio" name="destino" value="cidade" id="opt1" required>      
+      <label for="opt2">Campo</label>
+        <input type="radio" name="destino" value="campo" id="opt2" required>      
+      <label for="opt3">Praia</label>
+        <input type="radio" name="destino" value="praia" id="opt3" required>      
+      <label for="opt4">Montanhas</label>
+        <input type="radio" name="destino" value="montanhas" id="opt4" required>
+      <br>      
+      <label for="resposta">Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</label>
+      <br />
+      <textarea name="resposta" id="resposta" cols="60" rows="10" maxlength="500" placeholder="Digite sua resposta vencedora aqui"></textarea>
+      <br />
+      <label for="data">Qual a melhor data para realizar sua viagem?</label>
+      <input type="date" id="data">
+      <br />
+      <label for="concordo1">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?</label>
+      <input type="checkbox" name="concordo1" id="concordo1">
+      <br />
+      <label for="concordo2">Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.</label>
+      <input type="checkbox" name="concordo2" id="concordo2">
+    </fieldset>
+    <button type="submit" id="sub-botao">Participar do concurso TrybeTrip</button>
+    <button type="button" id="clear-botao">Apagar informações</button>
+  </form>      
+  <script src="script.js"></script>
+</body>
+</html>
