@@ -50,20 +50,101 @@ function feriados(buttonName) {
 feriados("Feriados");
 
 //3
-let holidayButton = document.querySelector('#btn-holiday');
-function feriadoClick () {  
-  
-  let holidays = document.querySelectorAll('.holiday');
-  let backgroundColor = "rgb(238,238,238)";
-  let newColor = 'white';
+const botao = document.querySelector('#btn-holiday');
+botao.addEventListener('click', function() {
+  const holidays = document.querySelectorAll('.holiday');
 
   for (let i = 0; i < holidays.length; i += 1) {
-    if (holidays[i].style.backgroundColor === newColor) {
-      holidays[i].style.backgroundColor === backgroundColor;
+    if (holidays[i].style.backgroundColor === 'white') {
+      holidays[i].style.backgroundColor = 'rgb(238,238,238)';
     } else {
-      holidays[i].style.backgroundColor === newColor
+      holidays[i].style.backgroundColor = 'white';
     };
   };
+});
+
+//4
+function friday() {
+  const divButton = document.querySelector('.buttons-container');
+  const buttonFriday = document.createElement('button');
+  buttonFriday.id = 'btn-friday';
+  buttonFriday.innerText = 'Sexta-feira';
+  divButton.appendChild(buttonFriday);
+}
+friday();
+
+//5
+const buttonFriday = document.querySelector('#btn-friday');
+buttonFriday.addEventListener('click', function() {
+  const fridays = document.querySelectorAll('.friday');
+
+  for (let i = 0; i < fridays.length; i += 1) {
+    if (fridays[i].innerHTML !== 'SEXTOU') {
+      fridays[i].innerHTML = 'SEXTOU';
+    } else {
+      fridays[i].innerHTML = Number(fridays[i].previousElementSibling.innerText) + 1;
+    };
+  };
+});
+
+//6
+const days = document.getElementsByClassName('day');
+
+for (const day of days) {
+  day.addEventListener('mouseover', function (event) {  
+  event.target.style.fontSize = '2em';
+});
 };
 
-holidayButton.addEventListener('click', feriadoClick);
+for (const day of days) {
+day.addEventListener('mouseout', function (event) {
+  event.target.style.fontSize = '20px';
+});
+};
+
+//7
+function tasks (string) {
+  let tarefa = document.createElement('span');
+  tarefa.innerText = string;
+  const taskDiv = document.querySelector('.my-tasks');
+  taskDiv.appendChild(tarefa);
+};
+tasks('cozinhar');
+
+//8
+function colors (cor) {
+  let color = document.createElement('div');
+  color.style.backgroundColor = cor;
+  color.className = 'task';
+  const taskDiv = document.querySelector('.my-tasks');
+  taskDiv.appendChild(color);
+};
+colors('red');
+
+//9
+const task = document.getElementsByClassName('task');
+
+for (const i of task) {
+  i.addEventListener('click', function (evt) {
+    if (evt.target.className === 'task selected') {
+      evt.target.className = 'task';
+    } else {
+      evt.target.className = 'task selected';
+    }   
+});
+};
+
+//10
+const taskSelect = document.querySelector('.task');
+
+for (let i of days) {
+  i.addEventListener('click', function (event){  
+    if (taskSelect == document.querySelector('.selected')) {
+      if (i.style.color !== 'red') {
+        event.target.style.color = taskSelect.style.backgroundColor;
+      } else {
+        event.target.style.color = 'rgb(119,119,119)';
+      }
+    }
+  })
+}
