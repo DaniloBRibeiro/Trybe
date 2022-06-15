@@ -1,0 +1,83 @@
+<main id="paiDoPai">
+  <section id="pai">
+    <section id="primeiroFilho"></section>
+    <section id="elementoOndeVoceEsta">
+      <section id="primeiroFilhoDoFilho"></section>
+      <section id="segundoEUltimoFilhoDoFilho"></section>
+    </section>
+    Atenção!
+    <section id="terceiroFilho"></section>
+    <section id="quartoEUltimoFilho"></section>
+  </section>
+</main>
+
+<!-- PARTE 1
+1 Acesse o elemento elementoOndeVoceEsta .
+2 Acesse pai a partir de elementoOndeVoceEsta e adicione uma color a ele.
+3 Acesse o primeiroFilhoDoFilho e adicione um texto a ele. Você se lembra dos vídeos da aula anterior, como fazer isso?
+4 Acesse o primeiroFilho a partir de pai .
+5 Agora acesse o primeiroFilho a partir de elementoOndeVoceEsta 
+6 Agora acesse o texto Atenção! a partir de elementoOndeVoceEsta .
+7 Agora acesse o terceiroFilho a partir de elementoOndeVoceEsta 
+8 Agora acesse o terceiroFilho a partir de pai . 
+-->
+
+<script>
+  //1
+  /*console.log(document.querySelector("#elementoOndeVoceEsta"));
+  //2
+  document.querySelector("#elementoOndeVoceEsta").parentNode.style.backgroundColor = 'red';
+  //3
+  document.getElementById('primeiroFilhoDoFilho').innerText = 'primeiro filho do filho';
+  //4
+  console.log(document.querySelector("#elementoOndeVoceEsta").firstElementChild);
+  //5
+  console.log(document.querySelector("#elementoOndeVoceEsta").previousElementSibling);
+  //6
+  console.log(document.querySelector("#elementoOndeVoceEsta").nextSibling);
+  //7
+  console.log(document.querySelector("#elementoOndeVoceEsta").nextElementSibling);
+  //8
+  console.log(document.querySelector("#pai").childNodes[5]);
+
+  //PARTE 2
+  //1 Crie um irmão para elementoOndeVoceEsta .
+  let irmao = document.createElement('section');
+  document.querySelector("#pai").appendChild(irmao);
+  console.log(document.querySelector('#pai').childNodes);
+  //2 Crie um filho para elementoOndeVoceEsta .
+  let filho = document.createElement('section');
+  document.querySelector('#elementoOndeVoceEsta').appendChild(filho);
+  console.log(document.querySelector('#elementoOndeVoceEsta').childNodes);
+  //3 Crie um filho para primeiroFilhoDoFilho .
+  let filhoDoFilho = document.createElement('section');
+  document.querySelector('#primeiroFilhoDoFilho').appendChild(filhoDoFilho);
+  console.log(document.querySelector('#primeiroFilhoDoFilho').childNodes);
+  //4 A partir desse filho criado, acesse terceiroFilho .
+  console.log(document.querySelector('#primeiroFilhoDoFilho').childNodes[1].parentNode.parentNode.nextElementSibling);
+*/
+  //PARTE 3
+  //Remova todos os elementos filhos de paiDoPai exceto:
+  //pai , elementoOndeVoceEsta e primeiroFilhoDoFilho
+  const pai = document.getElementById('pai');
+  console.log(pai.childNodes.length);
+  for (let i = pai.childNodes.length -1; i >= 0; i -= 1) {
+    const filho = pai.childNodes[i];
+    if (filho.id !== 'elementoOndeVoceEsta') {
+      filho.remove();
+    }
+  }
+  const elementoOnde = document.getElementById('elementoOndeVoceEsta');
+  console.log(elementoOnde.childNodes.length);
+  for (let i = elementoOnde.childNodes.length -1; i >= 0; i -= 1) {
+    const filhoDo = elementoOnde.childNodes[i];
+    if (filhoDo.id !== 'primeiroFilhoDoFilho') {
+      filhoDo.remove();
+    }
+  }
+
+  console.log(pai);
+  // console.log(pai.childNodes);
+  // console.log(pai.childNodes);
+  
+</script>
